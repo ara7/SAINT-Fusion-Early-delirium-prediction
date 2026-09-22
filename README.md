@@ -19,8 +19,8 @@ conda activate saint_env
 
 Make sure the following requirements are met
 
-* torch>=1.8.1
-* torchvision>=0.9.1
+* torch>=2.5.1
+* torchvision>=0.20.1
 
 ### Optional
 We used wandb to update our logs. But it is optional.
@@ -69,10 +69,6 @@ python train_robust.py --dset_id <openml_dataset_id> --task <task_name> --attent
 
 We choose the best model by evaluating the model on validation dataset. The AuROC(for binary classification datasets), Accuracy (for multiclass classification datasets), and RMSE (for regression datasets) of the best model on test datasets is printed after training is completed. If wandb is enabled, they are logged to 'test_auroc_bestep', 'test_accuracy_bestep', 'test_rmse_bestep'  variables.
 
-
-
-## What's new in this version?
-* Regression and multiclass classification models are added.
 * Data can be accessed directly from openml just by calling the id of the dataset.
 
 
